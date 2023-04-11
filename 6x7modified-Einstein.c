@@ -32,6 +32,11 @@ void G1() //min_node
 
 
 /*
+
+°Ñ¦Ò:
+https://www.youtube.com/watch?v=dIAeK8YNsDw
+https://mathspp.com/blog/minimax-algorithm-and-alpha-beta-pruning
+
 void fun_alphabeta(d,node,maxP, v, A, B)
 {
     if(d==3):
