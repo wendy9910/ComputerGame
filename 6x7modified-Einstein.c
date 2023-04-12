@@ -1,62 +1,58 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int maximum = 1000,minimum = -1000,best;
-int main()
-{
-    int d=30,node;
-    int grid[6][7];
+#define ROWS 6
+#define COLS 7
 
-    fun_alphabeta();
+typedef struct {
+    int x;
+    int y;
+} Position;
 
+typedef struct {
+    int color; // 0: red, 1: blue
+    int number; // number between 0 and 5
+    Position pos;
+} Cube;
+
+typedef struct {
+    Cube cubes[ROWS*COLS];
+    int turn; // 0: red, 1: blue
+    int board[ROWS][COLS]; // board[x][y] = 0: empty, 1: red, 2: blue
+} GameState;
+
+void init_game(GameState* game) {
+    // initialize the game state, including the board and the cubes
 }
 
-void F1(int p,int d) //max_node
-{
-    int m =-1000;
-    for(int i=0;i<b;i++)
-    {
-
-
-    }
-
-}
-void G1() //min_node
-{
-    int m = 1000;
-    for(int i=0;i<b;i++)
-    {
-
-
-    }
+int is_game_over(GameState* game) {
+    // check if the game is over
 }
 
-
-/*
-
-°Ñ¦Ò:
-https://www.youtube.com/watch?v=dIAeK8YNsDw
-https://mathspp.com/blog/minimax-algorithm-and-alpha-beta-pruning
-
-void fun_alphabeta(d,node,maxP, v, A, B)
-{
-    if(d==3):
-        return v[node];
-    if(maxP)
-    {
-        best = minimum;
-        for(int i=0;i<3;i++)
-        {
-
-
-        }
-
-    }
-    else
-    {
-
-
-    }
-
-
+int is_valid_move(GameState* game, int color, Position from, Position to) {
+    // check if the move is valid
 }
-*/
+
+void move_cube(GameState* game, int color, Position from, Position to) {
+    // move the cube from "from" to "to"
+}
+
+void play_game() {
+    GameState game;
+    init_game(&game);
+
+    while (!is_game_over(&game)) {
+        // print the board and ask the current player to make a move
+        // check if the move is valid, and if so, move the cube
+        // switch to the next player
+    }
+
+    // print the final result of the game
+}
+
+int main() {
+    play_game();
+    return 0;
+}
+
+
